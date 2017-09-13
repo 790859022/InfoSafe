@@ -1,0 +1,56 @@
+body{background:url(../img/s-bg.jpg) center 0 no-repeat;background-size:cover;}
+.skin-blue .main-header .logo:hover{background: #001335;}
+.main-header .logo{font-size: 18px;color: #000;}
+.main-header{border-bottom: 1px solid #2476ce;}
+.skin-blue .main-header .logo,
+.skin-blue .main-sidebar{border-right: 1px solid #2476ce;}
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side,
+.content-wrapper, .right-side{background: none;}
+.skin-blue .wrapper{background:url(../img/s-bg-repeat.png) 0 0 repeat;border: 1px solid #2476ce;}
+.skin-blue .main-header .navbar,
+.skin-blue .main-sidebar{background: rgba(3,31,80,.7);}
+.skin-blue .main-header .logo,
+.skin-blue .main-header li.user-header{background: #001335;}
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a{background: #001335;}
+.sidebar-menu li.active>a>.fa-angle-right, 
+.sidebar-menu li.active>a>.pull-right-container>.fa-angle-right{
+	-webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.content-header>h1,
+.breadcrumb>.active{color: #fff;}
+.content-header>.breadcrumb>li>a{color: #999;}
+.skin-blue .sidebar-form{margin: 0;}
+
+.row-base-style{position: relative;background: rgba(3,31,80,.7);margin: 15px 0 0;min-height: 100px;}
+.row-base-style .left-icon,
+.row-base-style .right-icon{position: absolute;left: 0;top: 0;bottom: 0;content: '';width: 10px;border-top: 1px solid #4ac5e9;border-bottom: 1px solid #4ac5e9;}
+.row-base-style .right-icon{right: 0;left: auto;top: 0;bottom: 0;border-left: none;}
+.row-base-style .left-icon:after,
+.row-base-style .left-icon:before,
+.row-base-style .right-icon:before,
+.row-base-style .right-icon:after{content:'';position: absolute;top: 0;border-left: 1px solid #4ac5e9;height: 10px;}
+.row-base-style .right-icon:before,
+.row-base-style .right-icon:after{border-left: none;right: 0;left: auto;border-right: 1px solid #4ac5e9;}
+.row-base-style .left-icon:after,
+.row-base-style .right-icon:after{top: auto;bottom: 0;}
+
+
+
+
+
+/*bootstrip switch style reset*/
+.top-search-switch-btn{padding: 14px 15px 0 0;}
+.bootstrap-switch{border-radius: 15px;}
+.bootstrap-switch.bootstrap-switch-on{border-color: #3c99dc;}
+.bootstrap-switch.bootstrap-switch-off{border-color: #999;}
+.bootstrap-switch .bootstrap-switch-label{background: none;}
+.bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off, 
+.bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on, 
+.bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label{text-indent:-200px;width: 20px;}
+.bootstrap-switch .bootstrap-switch-handle-on,
+.bootstrap-switch .bootstrap-switch-handle-off{border-radius: 15px;}
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default, 
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default{background: #999;}
