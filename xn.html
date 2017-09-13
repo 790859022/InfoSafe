@@ -74,7 +74,7 @@ desired effect
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <!-- Messages: style can be found in dropdown.less-->
-  <!--                       <li class="dropdown messages-menu">
+                        <!--                       <li class="dropdown messages-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope-o"></i><span class="label label-success">4</span></a>
                             <ul class="dropdown-menu">
                                 <li class="header">You have 4 messages</li>
@@ -96,7 +96,7 @@ desired effect
                         </li> -->
                         <!-- /.messages-menu -->
                         <!-- Notifications Menu -->
-<!--                         <li class="dropdown notifications-menu">
+                        <!--                         <li class="dropdown notifications-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell-o"></i> <span class="label label-warning">10</span> </a>
                             <ul class="dropdown-menu">
                                 <li class="header">You have 10 notifications</li>
@@ -111,7 +111,7 @@ desired effect
                             </ul>
                         </li> -->
                         <!-- Tasks Menu -->
-<!--                         <li class="dropdown tasks-menu">
+                        <!--                         <li class="dropdown tasks-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-flag-o"></i> <span class="label label-danger">9</span> </a>
                             <ul class="dropdown-menu">
                                 <li class="header">You have 9 tasks</li>
@@ -153,7 +153,7 @@ desired effect
                                     </p>
                                 </li>
                                 <!-- Menu Body -->
-              <!--                   <li class="user-body">
+                                <!--                   <li class="user-body">
                                     <div class="row">
                                         <div class="col-xs-4 text-center">
                                             <a href="#">Followers</a>
@@ -168,7 +168,7 @@ desired effect
                                 </li> -->
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
- <!--                                    <div class="pull-left">
+                                    <!--                                    <div class="pull-left">
                                         <a href="#" class="btn btn-default btn-flat">Profile</a>
                                     </div> -->
                                     <div class="pull-right">
@@ -178,12 +178,12 @@ desired effect
                             </ul>
                         </li>
                         <li>
-                          <div class="top-search-switch-btn">
-                          <input id="switch-size" type="checkbox" name="search-layer-checkbox" checked="checked" data-size="mini">
-                          </div>
+                            <div class="top-search-switch-btn">
+                                <input id="switch-size" type="checkbox" name="search-layer-checkbox" checked="checked" data-size="mini">
+                            </div>
                         </li>
                         <!-- Control Sidebar Toggle Button -->
-<!--                         <li>
+                        <!--                         <li>
                             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
                         </li> -->
                     </ul>
@@ -311,44 +311,133 @@ desired effect
                         </span>
                     </div>
                 </form>
-                <div class="row row-base-style">
+                <div class="row row-base-style text-center is-info-row">
                     <div class="left-icon"></div>
                     <div class="right-icon"></div>
                     <div class="col-lg-3 col-xs-6">
-                        
+                        <div class="item"><i class="fa fa-desktop text-fa9a2a" aria-hidden="true"></i>设备ip：10.1.6.175</div>
                     </div>
-                    <div class="col-lg-3 col-xs-6">1</div>
-                    <div class="col-lg-3 col-xs-6">1</div>
-                    <div class="col-lg-3 col-xs-6">1</div>
+                    <div class="col-lg-3 col-xs-6">
+                        <div class="item"><i class="fa fa-database text-76d4f2" aria-hidden="true"></i>内存：15.82gb</div>
+                    </div>
+                    <div class="col-lg-3 col-xs-6">
+                        <div class="item"><i class="fa fa-dashboard text-e95658" aria-hidden="true"></i>cpu：12核</div>
+                    </div>
+                    <div class="col-lg-3 col-xs-6">
+                        <div class="item"><i class="fa fa-tasks text-81bd51" aria-hidden="true"></i>磁盘：929.14gb</div>
+                    </div>
                 </div>
-              </div>
-                <!-- Your Page Content Here -->
-            </section>
-            <!-- /.content -->
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="row-base-style">
+                            <div class="left-icon"></div>
+                            <div class="right-icon"></div>
+                            <div class="item" id="cpu-charts">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="row-base-style">
+                            <div class="left-icon"></div>
+                            <div class="right-icon"></div>
+                            <div class="item" id="memory-charts">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="row-base-style is-table-data">
+                            <div class="left-icon"></div>
+                            <div class="right-icon"></div>
+                            <div class="item ">
+                                <div class="box-header">
+                                    <h3 class="box-title">当前进程列表</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body no-padding">
+                                    <table class="table table-condensed">
+                                        <tr>
+                                            <th style="">进程名称</th>
+                                            <th>物理内存</th>
+                                            <th>共享内存</th>
+                                            <th style="">内存使用率</th>
+                                            <th style="">CPU使用率</th>
+                                        </tr>
+                                        <tr>
+                                            <td>main－server.exe</td>
+                                            <td>393.58mb</td>
+                                            <td>0.00mb</td>
+                                            <td>0.20%</td>
+                                            <td>0.20%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>main－server.exe</td>
+                                            <td>393.58mb</td>
+                                            <td>0.00mb</td>
+                                            <td>0.20%</td>
+                                            <td>0.20%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>main－server.exe</td>
+                                            <td>393.58mb</td>
+                                            <td>0.00mb</td>
+                                            <td>0.20%</td>
+                                            <td>0.20%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>main－server.exe</td>
+                                            <td>393.58mb</td>
+                                            <td>0.00mb</td>
+                                            <td>0.20%</td>
+                                            <td>0.20%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>main－server.exe</td>
+                                            <td>393.58mb</td>
+                                            <td>0.00mb</td>
+                                            <td>0.20%</td>
+                                            <td>0.20%</td>
+                                        </tr>
+                
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                    </div>
+                </div>
         </div>
-        <!-- /.content-wrapper -->
-        <!-- Main Footer -->
-<!--         <footer class="main-footer">
+        </section>
+    </div>
+    <!-- Your Page Content Here -->
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- Main Footer -->
+    <!--         <footer class="main-footer">
             <div class="pull-right hidden-xs">
                 Anything you want
             </div>
             <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
         </footer> -->
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Create the tabs -->
-            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-                <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- Home tab content -->
-                <div class="tab-pane active" id="control-sidebar-home-tab">
-                    <h3 class="control-sidebar-heading">Recent Activity</h3>
-                    <ul class="control-sidebar-menu">
-                        <li>
-                            <a href="javascript:;">
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane active" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:;">
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
@@ -357,54 +446,54 @@ desired effect
                 <p>Will be 23 on April 24th</p>
               </div>
             </a>
-                        </li>
-                    </ul>
-                    <!-- /.control-sidebar-menu -->
-                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                    <ul class="control-sidebar-menu">
-                        <li>
-                            <a href="javascript:;">
-                                <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="pull-right-container">
-                  <span class="label label-danger pull-right">70%</span>
-                </span>
-              </h4>
-                                <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.control-sidebar-menu -->
-                </div>
-                <!-- /.tab-pane -->
-                <!-- Stats tab content -->
-                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-                <!-- /.tab-pane -->
-                <!-- Settings tab content -->
-                <div class="tab-pane" id="control-sidebar-settings-tab">
-                    <form method="post">
-                        <h3 class="control-sidebar-heading">General Settings</h3>
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Report panel usage
-                                <input type="checkbox" class="pull-right" checked>
-                            </label>
-                            <p>
-                                Some information about this general settings option
-                            </p>
-                        </div>
-                        <!-- /.form-group -->
-                    </form>
-                </div>
-                <!-- /.tab-pane -->
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:;">
+                            <h4 class="control-sidebar-subheading">
+                                    Custom Template Design
+                                    <span class="pull-right-container">
+                                      <span class="label label-danger pull-right">70%</span>
+                                    </span>
+                                  </h4>
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
             </div>
-        </aside>
-        <!-- /.control-sidebar -->
-        <!-- Add the sidebar's background. This div must be placed
+            <!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+                        <p>
+                            Some information about this general settings option
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+                </form>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
-        <div class="control-sidebar-bg"></div>
+    <div class="control-sidebar-bg"></div>
     </div>
     <!-- ./wrapper -->
     <!-- REQUIRED JS SCRIPTS -->
@@ -413,9 +502,11 @@ desired effect
     <!-- Bootstrap 3.3.6 -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/bootstrap-switch.js"></script>
+    <script src="dist/js/highcharts.js"></script>
     <!-- AdminLTE App -->
     <script src="dist/js/app.min.js"></script>
     <script src="dist/js/common.js"></script>
+    <script src="dist/js/xn.js"></script>
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the

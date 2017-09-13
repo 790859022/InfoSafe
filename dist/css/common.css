@@ -1,4 +1,10 @@
 body{background:url(../img/s-bg.jpg) center 0 no-repeat;background-size:cover;}
+.text-fa9a2a{color: #fa9a2a;}
+.text-e95658{color: #e95658;}
+.text-81bd51{color:#81bd51;}
+.text-76d4f2{color: #76d4f2;}
+
+
 .skin-blue .main-header .logo:hover{background: #001335;}
 .main-header .logo{font-size: 18px;color: #000;}
 .main-header{border-bottom: 1px solid #2476ce;}
@@ -23,23 +29,29 @@ body{background:url(../img/s-bg.jpg) center 0 no-repeat;background-size:cover;}
 .breadcrumb>.active{color: #fff;}
 .content-header>.breadcrumb>li>a{color: #999;}
 .skin-blue .sidebar-form{margin: 0;}
+.control-sidebar-dark, .control-sidebar-dark+.control-sidebar-bg{display: none;}
 
-.row-base-style{position: relative;background: rgba(3,31,80,.7);margin: 15px 0 0;min-height: 100px;}
+.row-base-style{position: relative;background: rgba(3,31,80,.7);margin: 15px 0 0;color: #fff;}
 .row-base-style .left-icon,
 .row-base-style .right-icon{position: absolute;left: 0;top: 0;bottom: 0;content: '';width: 10px;border-top: 1px solid #4ac5e9;border-bottom: 1px solid #4ac5e9;}
 .row-base-style .right-icon{right: 0;left: auto;top: 0;bottom: 0;border-left: none;}
 .row-base-style .left-icon:after,
 .row-base-style .left-icon:before,
 .row-base-style .right-icon:before,
-.row-base-style .right-icon:after{content:'';position: absolute;top: 0;border-left: 1px solid #4ac5e9;height: 10px;}
+.row-base-style .right-icon:after{content:'';position: absolute;top: 0;left: 0;border-left: 1px solid #4ac5e9;height: 10px;}
 .row-base-style .right-icon:before,
 .row-base-style .right-icon:after{border-left: none;right: 0;left: auto;border-right: 1px solid #4ac5e9;}
 .row-base-style .left-icon:after,
 .row-base-style .right-icon:after{top: auto;bottom: 0;}
 
-
-
-
+.is-info-row .item{height: 100px;line-height: 100px;}
+.is-info-row .item i.fa{margin-right: 10px;font-size: 28px;vertical-align: middle;}
+.is-table-data .item{padding: 20px;}
+.is-table-data .item .box-header{padding: 10px 0;}
+.is-table-data .item .box-title{color: #fff;}
+.is-table-data .item table td,
+.is-table-data .item table th{padding: 10px 5px;border-color: #2d5898;}
+.is-table-data .item table tr:first-child>*{border:none;}
 
 /*bootstrip switch style reset*/
 .top-search-switch-btn{padding: 14px 15px 0 0;}
