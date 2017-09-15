@@ -55,9 +55,30 @@ body{background:url(../img/s-bg.jpg) center 0 no-repeat;background-size:cover;}
 .is-table-data .item table th{padding: 10px 5px;border-color: #2d5898;}
 .is-table-data .item table tr:first-child>*{border:none;}
 
+.is-search{padding:10px 15px;margin-top: 0;}
+.is-search .select2{width: 100% !important;}
+.is-search .sidebar-form input[type="text"]{background: none;}
+.is-search .sidebar-form{border: none;}
+.is-search .sidebar-form .btn{background: none;color: #888;}
+.is-search .select2-container--default .select2-selection--single, 
+.is-search .select2-selection .select2-selection--single{background: none;border: none;color: #fff;}
+.is-search .select2-container--default .select2-selection--single .select2-selection__rendered{color: #fff;}
+.is-search .row .col-lg-3{border-right: 1px solid #ccc;}
+
+
+.is-progress{padding-left: 40px;}
+.is-progress .progress-bar{line-height: 16px;}
+.is-progress .progress{position: relative;background: #001335;border-radius: 10px;height: 16px;margin-bottom: 15px;}
+.is-progress .label{float: left;width: 40px;margin-left: -40px;white-space: nowrap;text-align: left;line-height: 16px;padding: 0;}
 
 /*强制设置图表宽度为100%*/
 .highcharts-container ,.highcharts-root{width: 100% !important;}
+
+/*性能监控-主机监控列表*/
+.xn-zj-list{margin-top: 20px;}
+.xn-zj-list .box{background: rgba(3,31,80,.7);border: 1px solid #2476ce;border-radius: 0;}
+.xn-zj-list .box-header{padding-top: 20px;}
+.xn-zj-list .sr-only{width: auto;height: auto;clip:auto;margin: 0;left: 20px;}
 
 /*bootstrip switch style reset*/
 .top-search-switch-btn{padding: 14px 15px 0 0;}

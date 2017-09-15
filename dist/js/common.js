@@ -1,17 +1,17 @@
 (function() {
 
-    ;
     var commonCtrl = {
         dom: function() {
             var _this = this;
-            _this.searchLayerSwitch = $("[name='search-layer-checkbox']")
+            _this.searchLayerSwitch = $("[name='search-layer-checkbox']");
+            _this.isSearch = $('.is-search');
         },
         bind: function() {
             var _this = this;
             //头部搜索框 开关事件
             _this.topSearchSwitchInit();
 
-
+            _this.isSearch.find('.select2').select2();
 
         },
         topSearchSwitchInit: function() {
