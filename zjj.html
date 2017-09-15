@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>性能监控</title>
+    <title>性能监控-中间件监控</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -298,7 +298,7 @@ desired effect
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-dashboard"></i>首页</a></li>
                     <li class=""><a href="#">性能监控</a></li>
-                    <li class=""><a href="#">主机监控</a></li>
+                    <li class=""><a href="#">中间件监控</a></li>
                     <li class="active">10.1.6.175</li>
                 </ol>
             </section>
@@ -319,14 +319,42 @@ desired effect
                     <div class="col-lg-3 col-xs-6">
                         <div class="item"><i class="fa fa-desktop text-fa9a2a" aria-hidden="true"></i>设备ip：10.1.6.175</div>
                     </div>
+                    <div class="col-lg-2 col-xs-6">
+                        <div class="item"><i class="fa fa-server text-52dabd" aria-hidden="true"></i>数据库：mysql</div>
+                    </div>
                     <div class="col-lg-3 col-xs-6">
                         <div class="item"><i class="fa fa-database text-76d4f2" aria-hidden="true"></i>内存：15.82gb</div>
                     </div>
-                    <div class="col-lg-3 col-xs-6">
+                    <div class="col-lg-2 col-xs-6">
                         <div class="item"><i class="fa fa-dashboard text-e95658" aria-hidden="true"></i>cpu：12核</div>
                     </div>
-                    <div class="col-lg-3 col-xs-6">
+                    <div class="col-lg-2 col-xs-12">
                         <div class="item"><i class="fa fa-tasks text-81bd51" aria-hidden="true"></i>磁盘：929.14gb</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-xs-12">
+                        <div class="row-base-style">
+                            <div class="left-icon"></div>
+                            <div class="right-icon"></div>
+                            <div class="item text-center" style="height: 300px;">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <p>当天请求总数</p>
+                                <p class="text-size60 text-76d4f2">200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-xs-12">
+                        <div class="row-base-style">
+                            <div class="left-icon"></div>
+                            <div class="right-icon"></div>
+                            <div class="item " id="links-charts" style="height: 300px;">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -334,7 +362,7 @@ desired effect
                         <div class="row-base-style">
                             <div class="left-icon"></div>
                             <div class="right-icon"></div>
-                            <div class="item" id="cpu-charts">
+                            <div class="item" id="http-q-charts">
                             </div>
                         </div>
                     </div>
@@ -342,7 +370,25 @@ desired effect
                         <div class="row-base-style">
                             <div class="left-icon"></div>
                             <div class="right-icon"></div>
-                            <div class="item" id="memory-charts">
+                            <div class="item" id="http-qStatus-charts">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="row-base-style">
+                            <div class="left-icon"></div>
+                            <div class="right-icon"></div>
+                            <div class="item" id="ip-charts">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="row-base-style">
+                            <div class="left-icon"></div>
+                            <div class="right-icon"></div>
+                            <div class="item" id="flow-charts">
                             </div>
                         </div>
                     </div>
@@ -354,52 +400,60 @@ desired effect
                             <div class="right-icon"></div>
                             <div class="item ">
                                 <div class="box-header">
-                                    <h3 class="box-title">当前进程列表</h3>
+                                    <h3 class="box-title">当日url访问量top统计</h3>
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body no-padding layer-mb20">
                                     <table class="table table-condensed">
                                         <tr>
-                                            <th style="">进程名称</th>
-                                            <th>物理内存</th>
-                                            <th>共享内存</th>
-                                            <th style="">内存使用率</th>
-                                            <th style="">CPU使用率</th>
+                                            <th style="width: 40px">序号</th>
+                                            <th>url</th>
+                                            <th style="width: 60px">访问量</th>
                                         </tr>
                                         <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
                                         </tr>
                                         <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
                                         </tr>
                                         <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
                                         </tr>
                                         <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
                                         </tr>
                                         <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -415,56 +469,64 @@ desired effect
                             <div class="right-icon"></div>
                             <div class="item ">
                                 <div class="box-header">
-                                    <h3 class="box-title">当前进程列表</h3>
+                                    <h3 class="box-title">当日最耗流量url top统计</h3>
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body no-padding layer-mb20">
                                     <table class="table table-condensed">
                                         <tr>
-                                            <th style="">进程名称</th>
-                                            <th>物理内存</th>
-                                            <th>共享内存</th>
-                                            <th style="">内存使用率</th>
-                                            <th style="">CPU使用率</th>
+                                            <th style="width: 40px">序号</th>
+                                            <th>url</th>
+                                            <th style="width: 60px">访问量</th>
                                         </tr>
                                         <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
                                         </tr>
                                         <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
                                         </tr>
                                         <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
                                         </tr>
                                         <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
                                         </tr>
                                         <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>http://www.baidu.com</td>
+                                            <td>100</td>
                                         </tr>
                                     </table>
                                 </div>
-                                <div class="text-center"><a class="text-ffffff">&nbsp;</a></div>
+                                <div class="text-center"><a href="" class="text-ffffff">&lt;加载更多&gt;</a></div>
                                 <!-- /.box-body -->
                             </div>
                             <!-- /.box -->
@@ -570,7 +632,7 @@ desired effect
     <!-- AdminLTE App -->
     <script src="dist/js/app.min.js"></script>
     <script src="dist/js/common.js"></script>
-    <script src="dist/js/xn.js"></script>
+    <script src="dist/js/zjj.js"></script>
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the

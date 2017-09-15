@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>性能监控</title>
+    <title>性能监控-数据库监控</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -294,189 +294,177 @@ desired effect
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <h1> 10.1.6.175 <!-- <small>Optional description</small> --> </h1>
+                <h1> 数据库监控 <!-- <small>Optional description</small> --> </h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-dashboard"></i>首页</a></li>
-                    <li class=""><a href="#">性能监控</a></li>
-                    <li class=""><a href="#">主机监控</a></li>
-                    <li class="active">10.1.6.175</li>
+                    <li><a href="#">性能监控</a></li>
+                    <li class="active">数据库监控</li>
                 </ol>
             </section>
             <!-- Main content -->
             <section class="content">
-                <!-- search form (Optional) -->
-                <form action="#" method="get" class="sidebar-form">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                          <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i> </button>
-                        </span>
-                    </div>
-                </form>
-                <div class="row row-base-style text-center is-info-row">
+                <div class="is-search row-base-style">
                     <div class="left-icon"></div>
                     <div class="right-icon"></div>
-                    <div class="col-lg-3 col-xs-6">
-                        <div class="item"><i class="fa fa-desktop text-fa9a2a" aria-hidden="true"></i>设备ip：10.1.6.175</div>
-                    </div>
-                    <div class="col-lg-3 col-xs-6">
-                        <div class="item"><i class="fa fa-database text-76d4f2" aria-hidden="true"></i>内存：15.82gb</div>
-                    </div>
-                    <div class="col-lg-3 col-xs-6">
-                        <div class="item"><i class="fa fa-dashboard text-e95658" aria-hidden="true"></i>cpu：12核</div>
-                    </div>
-                    <div class="col-lg-3 col-xs-6">
-                        <div class="item"><i class="fa fa-tasks text-81bd51" aria-hidden="true"></i>磁盘：929.14gb</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-xs-12">
-                        <div class="row-base-style">
-                            <div class="left-icon"></div>
-                            <div class="right-icon"></div>
-                            <div class="item" id="cpu-charts">
-                            </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-xs-6">
+                            <select class="form-control select2">
+                                <option selected="selected">Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-xs-6">
+                            <select class="form-control select2">
+                                <option selected="selected">Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 col-xs-12">
+                            <!-- search form (Optional) -->
+                            <form action="#" method="get" class="sidebar-form">
+                                <div class="input-group">
+                                    <input type="text" name="q" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn"> <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i> </button> </span>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xs-12">
-                        <div class="row-base-style">
-                            <div class="left-icon"></div>
-                            <div class="right-icon"></div>
-                            <div class="item" id="memory-charts">
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6 col-xs-12">
-                        <div class="row-base-style is-table-data">
-                            <div class="left-icon"></div>
-                            <div class="right-icon"></div>
-                            <div class="item ">
-                                <div class="box-header">
-                                    <h3 class="box-title">当前进程列表</h3>
+                <div class="xn-zj-list">
+                    <div class="row">
+                        <div class="col-lg-3 col-xs-12">
+                            <div class="box box-solid">
+                                <div class="box-header text-center">
+                                    <h3 class="box-title text-ffffff">0.0.0.0</h3>
+                                    <div class="text-ffffff text-size12">主机：linux / 数据库：mysql <br>占用内存：9,289.34MB</div class="text-ffffff text-small">
                                 </div>
                                 <!-- /.box-header -->
-                                <div class="box-body no-padding layer-mb20">
-                                    <table class="table table-condensed">
-                                        <tr>
-                                            <th style="">进程名称</th>
-                                            <th>物理内存</th>
-                                            <th>共享内存</th>
-                                            <th style="">内存使用率</th>
-                                            <th style="">CPU使用率</th>
-                                        </tr>
-                                        <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
-                                        </tr>
-                                    </table>
+                                <div class="box-body">
+                                    <div class="is-progress">
+                                        <span class="label">CPU</span>
+                                        <div class="progress ">
+                                            <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                <span class="sr-only">80% </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="is-progress">
+                                        <span class="label">MEM</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-green " role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                <span class="sr-only">40% </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text-center"><a href="" class="text-ffffff">&lt;加载更多&gt;</a></div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <div class="col-lg-3 col-xs-12">
+                            <div class="box box-solid">
+                                <div class="box-header text-center">
+                                    <h3 class="box-title text-ffffff">0.0.0.0</h3>
+                                    <div class="text-ffffff text-size12">主机：linux / 数据库：mysql <br>占用内存：9,289.34MB</div class="text-ffffff text-small">
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="is-progress">
+                                        <span class="label">CPU</span>
+                                        <div class="progress ">
+                                            <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                <span class="sr-only">80% </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="is-progress">
+                                        <span class="label">MEM</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-green " role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                <span class="sr-only">40% </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <div class="col-lg-3 col-xs-12">
+                            <div class="box box-solid">
+                                <div class="box-header text-center">
+                                    <h3 class="box-title text-ffffff">0.0.0.0</h3>
+                                    <div class="text-ffffff text-size12">主机：linux / 数据库：mysql <br>占用内存：9,289.34MB</div class="text-ffffff text-small">
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="is-progress">
+                                        <span class="label">CPU</span>
+                                        <div class="progress ">
+                                            <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                <span class="sr-only">80% </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="is-progress">
+                                        <span class="label">MEM</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-green " role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                <span class="sr-only">40% </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <div class="col-lg-3 col-xs-12">
+                            <div class="box box-solid">
+                                <div class="box-header text-center">
+                                    <h3 class="box-title text-ffffff">0.0.0.0</h3>
+                                    <div class="text-ffffff text-size12">主机：linux / 数据库：mysql <br>占用内存：9,289.34MB</div class="text-ffffff text-small">
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="is-progress">
+                                        <span class="label">CPU</span>
+                                        <div class="progress ">
+                                            <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                <span class="sr-only">80% </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="is-progress">
+                                        <span class="label">MEM</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-green " role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                <span class="sr-only">40% </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- /.box-body -->
                             </div>
                             <!-- /.box -->
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xs-12">
-                        <div class="row-base-style is-table-data">
-                            <div class="left-icon"></div>
-                            <div class="right-icon"></div>
-                            <div class="item ">
-                                <div class="box-header">
-                                    <h3 class="box-title">当前进程列表</h3>
-                                </div>
-                                <!-- /.box-header -->
-                                <div class="box-body no-padding layer-mb20">
-                                    <table class="table table-condensed">
-                                        <tr>
-                                            <th style="">进程名称</th>
-                                            <th>物理内存</th>
-                                            <th>共享内存</th>
-                                            <th style="">内存使用率</th>
-                                            <th style="">CPU使用率</th>
-                                        </tr>
-                                        <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>main－server.exe</td>
-                                            <td>393.58mb</td>
-                                            <td>0.00mb</td>
-                                            <td>0.20%</td>
-                                            <td>0.20%</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="text-center"><a class="text-ffffff">&nbsp;</a></div>
-                                <!-- /.box-body -->
-                            </div>
-                            <!-- /.box -->
-                        </div>
-                    </div>
                 </div>
+            </section>
         </div>
+        <!-- Your Page Content Here -->
         </section>
-    </div>
-    <!-- Your Page Content Here -->
-    </section>
-    <!-- /.content -->
+        <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
     <!-- Main Footer -->
@@ -517,11 +505,11 @@ desired effect
                     <li>
                         <a href="javascript:;">
                             <h4 class="control-sidebar-subheading">
-                                    Custom Template Design
-                                    <span class="pull-right-container">
-                                      <span class="label label-danger pull-right">70%</span>
-                                    </span>
-                                  </h4>
+                Custom Template Design
+                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+              </h4>
                             <div class="progress progress-xxs">
                                 <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
                             </div>
@@ -566,11 +554,9 @@ desired effect
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/bootstrap-switch.js"></script>
     <script src="plugins/select2/select2.full.min.js"></script>
-    <script src="dist/js/highcharts.js"></script>
     <!-- AdminLTE App -->
     <script src="dist/js/app.min.js"></script>
     <script src="dist/js/common.js"></script>
-    <script src="dist/js/xn.js"></script>
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the
