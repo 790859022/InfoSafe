@@ -149,6 +149,16 @@
                     color: '#56c0e8'
                 }]
             });
+
+            //如果屏幕resize 重新适应宽度
+            $('body').on('click',function(){
+                console.log('body');
+                setTimeout(function(){
+                    $('#cpu-charts').highcharts().reflow();
+                    $('#memory-charts').highcharts().reflow();
+                },500)
+            });
+            
         },
         init: function() {
             var _this = this;

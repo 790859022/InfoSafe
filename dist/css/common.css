@@ -3,6 +3,8 @@ body{background:url(../img/s-bg.jpg) center 0 no-repeat;background-size:cover;}
 .text-e95658{color: #e95658;}
 .text-81bd51{color:#81bd51;}
 .text-76d4f2{color: #76d4f2;}
+.text-ffffff{color: #fff;}
+.layer-mb20{margin-bottom: 20px;}
 
 
 .skin-blue .main-header .logo:hover{background: #001335;}
@@ -52,6 +54,10 @@ body{background:url(../img/s-bg.jpg) center 0 no-repeat;background-size:cover;}
 .is-table-data .item table td,
 .is-table-data .item table th{padding: 10px 5px;border-color: #2d5898;}
 .is-table-data .item table tr:first-child>*{border:none;}
+
+
+/*强制设置图表宽度为100%*/
+.highcharts-container ,.highcharts-root{width: 100% !important;}
 
 /*bootstrip switch style reset*/
 .top-search-switch-btn{padding: 14px 15px 0 0;}
